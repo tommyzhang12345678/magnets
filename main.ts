@@ -1,5 +1,6 @@
 basic.clearScreen()
 serial.redirectToUSB()
 basic.forever(function () {
-    serial.writeValue("x", 0)
+    basic.clearScreen()
+    serial.writeValue("x", input.magneticForce(Dimension.Strength))
 })
